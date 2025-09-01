@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Add to Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <header class="top-bar hidden" id="topBar">
+        <div class="welcome-text" id="welcomeText">Welcome back</div>
+        <button id="signOutBtn" class="signout-btn" type="button">Sign out</button>
+    </header>
+
+    <div class="container">
+        <div id="user" class="hidden">Not signed in</div>
+
+        <!-- Signed OUT -->
+        <section id="signedOutView">
+            <img src="assets/cat.png" alt="App logo" />
+
+            <h1 id="welcomeTitle">Welcome to KittyCart 🐾</h1>
+            <p id="welcomeTagline">Your cutest shopping list ever.</p>
+
+            <button id="signInBtn">Sign in with Google</button>
+        </section>
+
+
+        <!-- Signed IN -->
+        <section id="appView" class="hidden">
+            <img src="assets/cat.png" alt="App logo" />
+            <input type="text" id="input-field" placeholder="Bread" aria-label="Item to add" />
+            <button id="add-button">Add to cart</button>
+            <ul id="shopping-list"></ul>
+        </section>
+    </div>
+
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
